@@ -3,6 +3,8 @@
 # Author: Sébastien Combéfis
 # Version: February 8, 2018
 
+scipy
+
 def fact(n):
     """Computes the factorial of a natural number.
     
@@ -50,7 +52,7 @@ def integrate(function, lower, upper):
     """
     def f(x):
         return eval(function)
-        
+
     print(f(4))
 
 if __name__ == '__main__':
