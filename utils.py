@@ -13,14 +13,10 @@ def fact(n):
     a=1
     b=1
     if n < 0:
-        return "ValueError"
+        raise ValueError ("Can't negative")
     elif n==0:
-        return n
-    else:
-        while a<=n:
-            b*=a
-            a+=1
-        return b
+        return 1
+    return fact (n-1)*n
 
 
 
@@ -32,7 +28,16 @@ def roots(a, b, c):
     Post: Returns a tuple with zero, one or two elements corresponding
           to the roots of the ax^2 + bx + c polynomial.
     """
-    pass
+    delta = (b**2) - (4*a*c)
+    try:
+	    X1 = (-b + (delta)**(1/2))/(2*a)
+	    X2 = (-b - (delta)**(1/2))/(2*a)
+    except:
+	    return ()
+    if X1 == X2:
+        return X1
+    else:
+	    return (X1, X2)
 
 def integrate(function, lower, upper):
     """Approximates the integral of a fonction between two bounds
