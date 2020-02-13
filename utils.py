@@ -48,7 +48,10 @@ def integrate(function, lower, upper):
     Post: Returns an approximation of the integral from 'lower' to 'upper'
           of the specified 'function'.
     """
-    pass
+    def f(x):
+        return eval(function)
+        
+    print(f(4))
 
 if __name__ == '__main__':
     print(fact(5))
